@@ -45,4 +45,5 @@ public class Jogos {
     public void setGenero(Genero genero) {
         this.genero = genero;
     }
+    
 }

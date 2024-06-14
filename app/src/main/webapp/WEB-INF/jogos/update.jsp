@@ -11,16 +11,16 @@
         <div class="container">
             <h1>Editar jogos</h1>
             <form action="/jogos/update" method="post">
-                <input type="hidden" name="id" value="${jogos.id}" />
+                <input type="hidden" name="id" value="${jogo.id}" />
                 <div>
                     <label class="form-label">Título:</label>
-                    <input type="text" name="titulo" class="form-control" value="${jogos.titulo}" />
+                    <input type="text" name="titulo" class="form-control" value="${jogo.titulo}" />
                 </div>
                 <div>
                     <label class="form-label">Gênero:</label>
                     <select name="genero" class="form-select">
                         <c:forEach var="item" items="${generos}">
-                            <option ${item.id == jogos.genero.id ? "selected" : ""} value="${item.id}">${item.nome}</option>
+                            <option ${item.id == jogo.genero.id ? "selected" : ""} value="${item.id}">${item.nome}</option>
                         </c:forEach>
                     </select>
                 </div>
